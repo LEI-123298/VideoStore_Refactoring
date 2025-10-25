@@ -10,8 +10,10 @@
     <packaging>jar</packaging>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source> <!-- ou 21, conforme seu JDK -->
-        <maven.compiler.target>21</maven.compiler.target>
+        <!-- Ensure UTF-8 encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Use Java 8 release -->
+        <maven.compiler.release>8</maven.compiler.release>
     </properties>
 
     <dependencies>
@@ -41,8 +43,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
 
