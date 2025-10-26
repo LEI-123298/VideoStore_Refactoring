@@ -12,6 +12,7 @@ public abstract class Main
 	 ***********************************************************/
 	public static void main(String[] args)
 	{
+		//test user commit
 		Customer who = new Customer("Barack Obama");
 		Movie m1 = new Movie("Life of Amalia", Movie.Code.REGULAR);
 		Movie m2 = new Movie("Peter Pan", Movie.Code.CHILDRENS);
