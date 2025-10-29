@@ -19,4 +19,8 @@ public class Movie {
 	public Code getPriceCode() {
 		return _priceCode;
 	}
+	public int getFrequentRentalPoints(int duration)
+	{
+		return (_priceCode == v3.Movie.Code.NEW_RELEASE) && duration > 1 ? 2 : 1;
+	}
 }
