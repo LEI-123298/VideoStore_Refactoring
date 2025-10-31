@@ -24,7 +24,7 @@ public class Rental
 	public double getAmount()
 	{
 		double result = 0;
-	
+
 		// determine amounts for each line
 		switch (getMovie().getPriceCode())
 		{
