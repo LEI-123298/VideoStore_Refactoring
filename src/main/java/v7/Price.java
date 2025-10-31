@@ -6,14 +6,19 @@ public class Price
 	
 	public Code	_priceCode;
 
-	public Price()
-	{
+    public Price(Code priceCode) {
+			_priceCode = priceCode;
+    }
+
+	public Code get_priceCode() {
+		return _priceCode;
 	}
 
-	public double getRentalAmount(Movie movie, int duration)
+
+	public double getRentalAmount(int duration)
 	{
 		double result = 0;
-	
+
 		switch (_priceCode)
 		{
 			case REGULAR:
@@ -31,5 +36,10 @@ public class Price
 				break;
 		}
 		return result;
+	}
+
+	public int getFrequentRentalPoints(int duration)
+	{
+		return (_priceCode == v7.Price.Code.NEW_RELEASE) && duration > 1 ? 2 : 1;
 	}
 }
